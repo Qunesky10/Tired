@@ -19,7 +19,7 @@ public class FactorialOfANumber {
         
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Enter a number");
+        System.out.println("Enter a numbersss");
         
         n = sc.nextLong();
         
