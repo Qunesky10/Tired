@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>workSpace.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Junit&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">junit</a> &gt; <span class="el_source">workSpace.java</span></div><h1>workSpace.java</h1><pre class="source lang-java linenums">package junit;
+
+import java.util.Random;
+import java.util.Scanner;
+
+<span class="fc" id="L6">public class workSpace {</span>
+    
+<span class="fc" id="L8">    public int factor  = 1, number;</span>
+<span class="fc" id="L9">    Random random = new Random();</span>
+    int randomValue;
+    public void factorialOfNumber(int factor){
+<span class="nc" id="L12">        this.factor = factor;</span>
+<span class="nc" id="L13">        System.out.println(&quot;Enter your number: &quot;);</span>
+<span class="nc" id="L14">        Scanner scan = new Scanner(System.in);</span>
+<span class="nc" id="L15">        number = scan.nextInt();</span>
+        
+<span class="nc bnc" id="L17" title="All 2 branches missed.">        for(int i = 1; i &lt;= number; i++){</span>
+<span class="nc" id="L18">            factor = factor * i;</span>
+        }
+<span class="nc" id="L20">        System.out.println(&quot;Factorail of &quot; + number + &quot; is &quot; + factor);</span>
+       
+<span class="nc" id="L22">    }</span>
+    
+    void generateRandomNumber(){
+        
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        for(int i = 1 ; i &lt; 10000; i++){</span>
+<span class="fc" id="L27">            randomValue = random.nextInt((999 - 100) + 1) + 100;</span>
+<span class="fc" id="L28">            System.out.println(&quot;random value: &quot; + randomValue);</span>
+        }
+<span class="fc" id="L30">    }</span>
+    
+    public static void main(String[] args) {
+<span class="nc" id="L33">        workSpace obj = new workSpace();</span>
+<span class="nc" id="L34">        obj.generateRandomNumber();</span>
+//        obj.factorialOfNumber(5);
+<span class="nc" id="L36">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
